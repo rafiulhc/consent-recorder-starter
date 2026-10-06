@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo: solar quote form</title>
+<link rel="stylesheet" href="/demo/demo.css">
+<script src="/recorder.js" defer></script>
+</head>
+<body>
+<main class="demo">
+  <p class="tag">Demo landing page · nothing here is sent anywhere real</p>
+  <h1>Get a free solar quote</h1>
+  <p class="lead">Fill in the form and submit it. The recorder masks what you type, then gives you a consent certificate with a replay of the session.</p>
+
+  <form data-consent-form method="post" action="/demo/submit">
+    <label>Full name <input name="name" autocomplete="off" required></label>
+    <label>Phone <input type="tel" name="phone" data-consent-phone autocomplete="off" placeholder="(555) 123-4567" required></label>
+    <label>Email <input type="email" name="email" data-consent-email autocomplete="off" placeholder="you@example.com"></label>
+    <label>Monthly electric bill
+      <select name="bill"><option>Under $100</option><option>$100–$200</option><option>Over $200</option></select>
+    </label>
+    <label class="consent">
+      <input type="checkbox" data-consent-checkbox required>
+      <span data-consent-text>By clicking "Get my quote", I agree that Demo Solar Co. may contact me at the number provided, including by autodialed calls and text messages. Consent is not a condition of purchase. Message and data rates may apply.</span>
+    </label>
+    <button type="submit">Get my quote</button>
+  </form>
+</main>
+</body>
+</html>

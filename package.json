@@ -1,0 +1,28 @@
+{
+  "name": "consent-recorder-starter",
+  "version": "1.0.0",
+  "description": "Privacy-first session recorder that turns web form submissions into tamper-evident consent certificates",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "demo": "node scripts/demo.js",
+    "test": "node --test test/"
+  },
+  "keywords": ["consent", "tcpa", "rrweb", "session-replay", "lead-generation", "privacy", "express", "mongodb", "s3"],
+  "author": "Rafiul Hasan Chowdhury",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1146.0",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "mongodb": "^7.0.0",
+    "rrweb": "2.1.7",
+    "rrweb-player": "2.1.7"
+  }
+}
